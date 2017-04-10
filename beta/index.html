@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html data-ng-app="cubeatrix" data-ng-controller="cubeController">
+<head>
+    <title>Diablo 3 Cube Tracker</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" ng-href="{{Themes[Options.ThemeID].URL}}">
+    <link rel="stylesheet" href="CSS/icofont.css">
+    
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
+    <script src="Script/app.js"></script>
+    <script src="Script/filters.js"></script>
+    
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cNavBar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span style="font-size: 28px; vertical-align: top;" class="icofont icofont-cube"></span> <span style="font-size: 20px; vertical-align: top;">D3 Cube Tracker</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="cNavBar">
+                <div class="navbar-form form-inline" role="search">
+                    <div class="col-xs-12 col-md-6 input-group">
+                        <input type="text" class="form-control" ng-model="SFSearchText" placeholder="Search for...">
+                        <div class="hidden-xs input-group-btn">
+                            
+                            <div class="hidden-xs btn-group" role="group">
+                                <button type="button" class="hiddem-md btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{SFType != '' ? SFType : 'Type'}}<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-ng-click="SetTypeFilter('')">All</a></li>
+                                    <li class="divider"></li>
+                                    <li ng-repeat="item in ItemDB.Items | unique:'Type'"><a href="#" ng-click="SetTypeFilter(item.Type)">{{item.Type}}</a></li>
+                                </ul>                    
+                            </div>                         
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{SFSubType != '' ? SFSubType : 'SubType'}}<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-ng-click="SetTypeFilter('')">All</a></li>
+                                    <li class="divider"></li>
+                                    <li ng-repeat="item in ItemDB.Items | filter:{Type: SFType} | unique:'SubType' | orderBy:'SubType'"><a href="#" ng-click="SetSubTypeFilter(item.SubType)">{{item.SubType}}</a></li>
+                                </ul>                    
+                            </div>                         
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{SFClass != '' ? SFClass : 'Class'}}<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" data-ng-click="SetClassFilter('')">All</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" data-ng-click="SetClassFilter('Barbarian')">Barbarian</a></li>
+                                    <li><a href="#" data-ng-click="SetClassFilter('Crusader')">Crusader</a></li>
+                                    <li><a href="#" data-ng-click="SetClassFilter('Demon Hunter')">Demon Hunter</a></li>
+                                    <li><a href="#" data-ng-click="SetClassFilter('Monk')">Monk</a></li>
+                                    <li><a href="#" data-ng-click="SetClassFilter('Witch Doctor')">Witch Doctor</a></li>
+                                    <li><a href="#" data-ng-click="SetClassFilter('Wizard')">Wizard</a></li>
+                                </ul>                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <ul class="nav navbar-right">
+                        <li class="dropdown nav-right">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="icofont icofont-gear"></span> Options<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" ng-click="ChangeProfile('LR')">Live:Regular</a></li>
+                                <li><a href="#" ng-click="ChangeProfile('LH')">Live:Hardcore</a></li>
+                                <li><a href="#" ng-click="ChangeProfile('PR')">PTR:Regular</a></li>
+                                <li><a href="#" ng-click="ChangeProfile('PH')">PTR:Hardcore</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" ng-click="ShowOptions()">Options</a></li>                      
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-top: 70px">
+        <div ng-show="Options.Display.ShowProgress == true" class="col-lg-12">
+            <div class="col-lg-4">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="345" style="width:{{((ItemDB.Items | filter:{NS:'true'}).length/ItemDB.Items.length * 100).toFixed(2)}}%">
+                        {{((ItemDB.Items | filter:{NS:'true'}).length/ItemDB.Items.length * 100).toFixed(0)}}% Complete
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:{{((ItemDB.Items | filter:{S:'true'}).length/ItemDB.Items.length * 100).toFixed(0)}}%">
+                        {{((ItemDB.Items | filter:{S:'true'}).length/ItemDB.Items.length * 100).toFixed(0)}}% Complete
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:{{((ItemDB.Items | filter:{ST:'true'}).length/ItemDB.Items.length * 100).toFixed(0)}}%">
+                        {{((ItemDB.Items | filter:{ST:'true'}).length/ItemDB.Items.length * 100).toFixed(0)}}% Complete
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Table -->
+        <table id="uiLegendaryList" class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th width="130" ng-show="Options.Display.ShowNS == true">
+                        <a href="#" ng-click="SortType='NS'; SortReverse = !SortReverse;">
+                            Non-Season
+                            <span ng-show="SortType == 'NS' && SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'NS' && !SortReverse" class="dropup"><spanclass="caret"></span></span>
+                        </a>
+                    </th>
+                    <th width="130" ng-show="Options.Display.ShowS == true">
+                        <a href="#" ng-click="SortType='S'; SortReverse = !SortReverse;">
+                            Season
+                            <span ng-show="SortType == 'S' && SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'S' && !SortReverse" class="dropup"><span class="caret"></span></span>
+                        </a>
+                    </th>
+                    <th width="130" ng-show="Options.Display.ShowST == true">
+                        <a href="#" ng-click="SortType='ST'; SortReverse = !SortReverse">
+                            Stash
+                            <span ng-show="SortType == 'ST' && SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'ST' && !SortReverse" class="dropup"><span class="caret"></span></span>
+                        </a>
+                    </th>
+                    <th width="100" ng-show="Options.Display.ShowType == true">
+                        <a href="#" ng-click="SortType='Type'; SortReverse = !SortReverse">
+                            Type
+                            <span ng-show="SortType == 'Type' && !SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'Type' && SortReverse" class="dropup"><span class="caret"></span></span>
+                        </a>
+                    </th>
+                    <th width="200" ng-show="Options.Display.ShowSubType == true">
+                        <a href="#" ng-click="SortType='SubType'; SortReverse = !SortReverse">
+                            SubType
+                            <span ng-show="SortType == 'SubType' && !SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'SubType' && SortReverse" class="dropup"><span class="caret"></span></span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="#" ng-click="SortType='Name'; SortReverse = !SortReverse;">
+                            Legendary
+                            <span ng-show="SortType == 'Name' && !SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'Name' && SortReverse" class="dropup"><span class="caret"></span></span>
+                        </a>
+                    </th>
+                    <th ng-show="Options.Display.ShowDescription == true">
+                        <a href="#" ng-click="SortType='Description'; SortReverse = !SortReverse;">
+                            Description
+                            <span ng-show="SortType == 'Description' && !SortReverse" class="caret"></span>
+                            <span ng-show="SortType == 'Description' && SortReverse" class="dropup"><span class="caret"></span></span>
+                        </a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr data-ng-repeat="item in ItemDB.Items | orderBy:SortType:SortReverse | filter:{Type: SFType, SubType: SFSubType,  Name: SFSearchText} | class:SFClass">
+                    <td ng-show="Options.Display.ShowNS == true"><input ng-click="Toggle(item, 0)" type="button" class="btn btn-xs btn-block btn-default" ng-class="item.NS ? 'btn-danger' : ''" value="Non-Season"></td>
+                    <td ng-show="Options.Display.ShowS == true"><input ng-click="Toggle(item, 1)" type="button" class="btn btn-xs btn-block btn-default" ng-class="item.S ? 'btn-success' : ''" value="Season"></td>
+                    <td ng-show="Options.Display.ShowST == true"><input ng-click="Toggle(item, 2)" type="button" class="btn btn-xs btn-block btn-default" ng-class="item.ST ? 'btn-warning' : ''" value="Stash"></td>
+                    <td ng-show="Options.Display.ShowType == true">{{item.Type}}</td>
+                    <td ng-show="Options.Display.ShowSubType == true">{{item.SubType}}</td>
+                    <td><span ng-show="item.Type == 'Armor'" class="icofont icofont-shield"></span><span ng-show="item.Type == 'Jewlery'" class="icofont icofont-jewlery"></span><span ng-show="item.Type == 'Weapon'" class="icofont icofont-gavel"></span> {{item.Name}}</td>
+                    <td ng-show="Options.Display.ShowDescription == true" ng-bind-html="item.Description">{{item.Description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    
+    
+    <!-- Modal -->
+    <div id="d3Options" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" ng-click="saveOptions()">&times;</button>
+            <h4 class="modal-title">Options</h4>
+          </div>
+          <div class="modal-body row">
+              <div class="col-md-6">
+                  <h4>Theme</h4>
+                  <select class="form-control" ng-model="Options.ThemeID" ng-options="theme.ID as theme.Name for theme in Themes"></select>
+                  <h4>Display Options</h4>
+                  <a href="#" ng-class="Options.Display.ShowNS ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Non Season Column" ng-click="Options.Display.ShowNS = !Options.Display.ShowNS"><span ng-show="Options.Display.ShowNS == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowNS == true" class="glyphicon glyphicon-ok"></span><strong> Non-Season Buttons</strong></a><br/>
+                  <a href="#" ng-class="Options.Display.ShowS ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Season Column" ng-click="Options.Display.ShowS = !Options.Display.ShowS"><span ng-show="Options.Display.ShowS == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowS == true" class="glyphicon glyphicon-ok"></span><strong> Season Buttons</strong></a><br/>
+                  <a href="#" ng-class="Options.Display.ShowST ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Stash Column" ng-click="Options.Display.ShowST = !Options.Display.ShowST"><span ng-show="Options.Display.ShowST == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowST == true" class="glyphicon glyphicon-ok"></span><strong> Stash Buttons</strong></a><br/>                  
+                  <a href="#" ng-class="Options.Display.ShowType ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Type Column" ng-click="Options.Display.ShowType = !Options.Display.ShowType"><span ng-show="Options.Display.ShowType == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowType == true" class="glyphicon glyphicon-ok"></span><strong> Type Column</strong></a><br/>
+                  <a href="#" ng-class="Options.Display.ShowSubType ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide SubType Column" ng-click="Options.Display.ShowSubType = !Options.Display.ShowSubType"><span ng-show="Options.Display.ShowSubType == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowSubType == true" class="glyphicon glyphicon-ok"></span><strong> Sub Type Column</strong></a><br/>
+                  <a href="#" ng-class="Options.Display.ShowDescription ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Description Column" ng-click="Options.Display.ShowDescription = !Options.Display.ShowDescription"><span ng-show="Options.Display.ShowDescription == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowDescription == true" class="glyphicon glyphicon-ok"></span><strong> Description Column</strong></a><br/>
+                  <a href="#" ng-class="Options.Display.ShowProgress ? 'text-success' : 'text-danger'" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Progress Bars" ng-click="Options.Display.ShowProgress = !Options.Display.ShowProgress"><span ng-show="Options.Display.ShowProgress == false" class="glyphicon glyphicon-remove"></span><span ng-show="Options.Display.ShowProgress == true" class="glyphicon glyphicon-ok"></span><strong> Progress Bars</strong></a><br/>
+
+              </div>
+              <div class="col-md-6">
+                  <h4>Data Options</h4>
+                  <button type="button" ng-click="EndSeason()" data-toggle="tooltip" data-placement="bottom" title="Transfer all Seasonal Cubed items to Non-Season" class="btn btn-danger btn-block">End Season</button>
+                  <h4>Profile Options</h4>
+                  <button type="button" data-container="body" ng-click="ChangeProfile('CLEAR')" data-toggle="tooltip" data-placement="bottom" title="Clear the Current Profile" class="btn btn-primary btn-block">Clear Current Profile</button>
+                  <button type="button" data-container="body" ng-click="" data-toggle="tooltip" data-placement="bottom" title="Clear ALL data for all profiles" class="btn btn-warning btn-block">Clear All Profiles</button>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="saveOptions()">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    
+</body>
+</html>

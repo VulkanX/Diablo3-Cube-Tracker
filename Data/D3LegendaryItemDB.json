@@ -4027,17 +4027,6 @@
       "S": false,
       "ST": false,
 	  "Class": ["Demon Hunter"]
-    },
-    {
-      "ID": 366,
-      "Name": "Manald Heal",
-      "Type": "Jewelry",
-      "SubType": "Ring",
-      "Description": "Enemies stunned with Paralysis also take <font color='blue' class='text-info'><strong>14000%</strong></font> weapon damage as Lightning.",
-      "NS": false,
-      "S": false,
-      "ST": false,
-	  "Class": ["Wizard"]
     }
   ]
 }

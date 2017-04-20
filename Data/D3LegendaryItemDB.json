@@ -1003,17 +1003,17 @@
       "ST": false,
 	  "Class": ["Barbarian","Crusader","Monk","Witch Doctor","Wizard"]
     },
-    {
-      "ID": 91,
-      "Name": "Meticulous Bolts",
-      "Type": "Weapon",
-      "SubType": "Quiver",
-      "Description": "Elemental Arrow - Ball Lightning now travels at <font color='blue' class='text-info'><strong>40%</strong></font> speed.",
-      "NS": false,
-      "S": false,
-      "ST": false,
-	  "Class": ["Demon Hunter"]
-    },
+    // {
+    //   "ID": 91,
+    //   "Name": "Meticulous Bolts (Deprecated)",
+    //   "Type": "Weapon",
+    //   "SubType": "Quiver",
+    //   "Description": "Elemental Arrow - Ball Lightning now travels at <font color='blue' class='text-info'><strong>40%</strong></font> speed.",
+    //   "NS": false,
+    //   "S": false,
+    //   "ST": false,
+	  // "Class": ["Demon Hunter"]
+    // },
     {
       "ID": 92,
       "Name": "Mirrorball",
@@ -3225,17 +3225,17 @@
       "ST": false,
 	  "Class": ["Witch Doctor"]
     },
-    {
-      "ID": 293,
-      "Name": "Trag'Oul Coils",
-      "Type": "Armor",
-      "SubType": "Bracers",
-      "Description": "Healing wells replenish all resources and reduce all cooldowns by <font color='blue' class='text-info'><strong>60</strong></font> seconds.",
-      "NS": false,
-      "S": false,
-      "ST": false,
-	  "Class": ["Barbarian","Crusader","Demon Hunter","Monk","Witch Doctor","Wizard"]
-    },
+    // {
+    //   "ID": 293,
+    //   "Name": "Trag'Oul Coils (Deprecated)",
+    //   "Type": "Armor",
+    //   "SubType": "Bracers",
+    //   "Description": "Healing wells replenish all resources and reduce all cooldowns by <font color='blue' class='text-info'><strong>60</strong></font> seconds.",
+    //   "NS": false,
+    //   "S": false,
+    //   "ST": false,
+	  // "Class": ["Barbarian","Crusader","Demon Hunter","Monk","Witch Doctor","Wizard"]
+    // },
     {
       "ID": 294,
       "Name": "Tzo Krin's Gaze",

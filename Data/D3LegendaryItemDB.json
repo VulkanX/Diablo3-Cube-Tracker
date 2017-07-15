@@ -5328,6 +5328,409 @@
             "Class": [
                 "Demon Hunter"
             ]
+        },
+        {
+            "ID": 366,
+            "Name": "Funerary Pick",
+            "Type": "Weapon",
+            "SubType": "Scythe",
+            "Description": "Siphon Blood drains blood from 2 additional targets.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 367,
+            "Name": "Trag'Oul's Corroded Fang",
+            "Type": "Weapon",
+            "SubType": "Scythe",
+            "Description": "The Cursed Scythe rune for Grim Scythe now has a 100% chance to apply a curse and you deal <font color='blue' class='text-info'><strong>200%</strong></font> increases damage to cursed enemies.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 368,
+            "Name": "Scythe of the Cycle",
+            "Type": "Weapon",
+            "SubType": "Scythe",
+            "Description": "Your Secondary skills deal <font color='blue' class='text-info'><strong>300%</strong></font> additional damage while Bone Armor is active but reduce the remaining duration of Bone Armor by 4 seconds.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 369,
+            "Name": "Reilena's Shadowhook",
+            "Type": "Weapon",
+            "SubType": "Scythe 2H",
+            "Description": "Every point of Maximum Essence increases you damage by 0.5% and Bone Spikes generates <font color='blue' class='text-info'><strong>5</strong></font> additional Essence for each enemy hit.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 370,
+            "Name": "Maltorius' Petrified Spike",
+            "Type": "Weapon",
+            "SubType": "Scythe 2H",
+            "Description": "Bone Spear now costs 50 Essence and deals <font color='blue' class='text-info'><strong>450%</strong></font> increased damage.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 371,
+            "Name": "Bloodtide Blade",
+            "Type": "Weapon",
+            "SubType": "Scythe 2H",
+            "Description": "Death Nova deals <font color='blue' class='text-info'><strong>30%</strong></font> increased damage for every enemy within 15 yards.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 372,
+            "Name": "Nayr's Black Death",
+            "Type": "Weapon",
+            "SubType": "Scythe 2H",
+            "Description": "Each different poison skill you use increases the damage of your poison skills by  <font color='blue' class='text-info'><strong>65%</strong></font> for 15 seconds.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 373,
+            "Name": "Lost Time",
+            "Type": "Weapon",
+            "SubType": "Phylactery",
+            "Description": "Your cold skills reduce the movement speed of enemies by 30%. In addition, your movement speed is increased by <font color='blue' class='text-info'><strong>5%</strong></font> for 5 seconds.  Maximum 5 stacks.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 374,
+            "Name": "Iron Rose",
+            "Type": "Weapon",
+            "SubType": "Phylactery",
+            "Description": "Attacking with Siphon Blood has a <font color='blue' class='text-info'><strong>50%</strong></font> chance to cast a free Blood Nova.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 375,
+            "Name": "Leger's Disdain",
+            "Type": "Weapon",
+            "SubType": "Phylactery",
+            "Description": "Grim Scythe deals and additional <font color='blue' class='text-info'><strong>10%</strong></font> damage for each point of essence it restores.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 376,
+            "Name": "Bone Ringer",
+            "Type": "Weapon",
+            "SubType": "Phylactery",
+            "Description": "The damage bonus of Command Skeletons increases by <font color='blue' class='text-info'><strong>30%</strong></font> per second they spend attacking the same target.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 377,
+            "Name": "Mask of Scarlet Death",
+            "Type": "Armor",
+            "SubType": "Helm",
+            "Description": "Revive now consumes all corpses to raise a minion that deals <font color='blue' class='text-info'><strong>150%</strong></font> more damage per corpse.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 378,
+            "Name": "Fate's Vow",
+            "Type": "Armor",
+            "SubType": "Helm",
+            "Description": "Army of the Dead gains the effect of the Unconventional Warfare rune.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 379,
+            "Name": "Razeth's Volition",
+            "Type": "Armor",
+            "SubType": "Shoulders",
+            "Description": "Skeletal Mage gains the effect of the Gift of Death rune.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 380,
+            "Name": "Corpsewhisper Pauldrons",
+            "Type": "Armor",
+            "SubType": "Shoulders",
+            "Description": "Corpse Lance damage is increased by <font color='blue' class='text-info'><strong>30%</strong></font> for 3 seconds when you consume a corpse.  Max 20 stacks.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 381,
+            "Name": "Bloodsong Mail",
+            "Type": "Armor",
+            "SubType": "Chest Armor",
+            "Description": "While in the Land of the Dead, Command Skeletons gains the effect of all runes and deals <font color='blue' class='text-info'><strong>125%</strong></font> additional damage.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 382,
+            "Name": "Requiem Cereplate",
+            "Type": "Armor",
+            "SubType": "Chest Armor",
+            "Description": "Devour restores an additional <font color='blue' class='text-info'><strong>100%</strong></font> Essence and Life.  In addition, when Devour restores Essence or Life above your maximum, the excess is granted over 3 seconds.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 383,
+            "Name": "Grasps of Essence",
+            "Type": "Armor",
+            "SubType": "Gloves",
+            "Description": "When an exploded corpse damages at least one enemy, your Corpse Explosion deals <font color='blue' class='text-info'><strong>100%</strong></font> increased damage for 6 seconds, stacking up to 5 times.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 384,
+            "Name": "Moribund Gauntlets",
+            "Type": "Armor",
+            "SubType": "Gloves",
+            "Description": "Your Golem sheds a corpse every second.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 385,
+            "Name": "Dayntee's Binding",
+            "Type": "Armor",
+            "SubType": "Belt",
+            "Description": "You gain an additional <font color='blue' class='text-info'><strong>50%</strong></font> damage reduction when there is an enemy afflicted by your Decrepify..",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 386,
+            "Name": "Golemskin Breeches",
+            "Type": "Armor",
+            "SubType": "Pants",
+            "Description": "Your Golem's damage is increased by <font color='blue' class='text-info'><strong>125%</strong></font> and you take 30% less damage while it is alive.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 387,
+            "Name": "Golemskin Breeches",
+            "Type": "Armor",
+            "SubType": "Pants",
+            "Description": "Your Bone Spirit's damage is increased by <font color='blue' class='text-info'><strong>100%</strong></font> for every second it is active.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 388,
+            "Name": "Bryner's Journey",
+            "Type": "Armor",
+            "SubType": "Boots",
+            "Description": "Attacking with Bone Spikes has a <font color='blue' class='text-info'><strong>30%</strong></font> chance to cast a Bone Nova at the target location.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 389,
+            "Name": "Steuart's Greaves",
+            "Type": "Armor",
+            "SubType": "Boots",
+            "Description": "You gain <font color='blue' class='text-info'><strong>50%</strong></font> increased movement speed for 2 seconds after using Blood Rush.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 390,
+            "Name": "Wisdom of Kalan",
+            "Type": "Jewelry",
+            "SubType": "Amulet",
+            "Description": "Increases the maximum stacks of Bone Armor by <font color='blue' class='text-info'><strong>5</strong></font>.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 391,
+            "Name": "The Johnstone",
+            "Type": "Jewelry",
+            "SubType": "Amulet",
+            "Description": "Each corpse consumed in the Land of the Dead grants a stack of Macabre Knowledge.  Macabre Knowledge increases the damage of Corpse Lance and Corpse Explosion by <font color='blue' class='text-info'><strong>200%</strong></font> while outside Land of the Dead.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 392,
+            "Name": "Haunted Visions",
+            "Type": "Jewelry",
+            "SubType": "Amulet",
+            "Description": "Simulacrum now drains <font color='blue' class='text-info'><strong>5%</strong></font> of your maximum life every second and lasts twice as long.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 393,
+            "Name": "Circle of Nailuj's Evol",
+            "Type": "Jewelry",
+            "SubType": "Ring",
+            "Description": "You now raise an additional Skeletal Mage with each cast and they now last an additional <font color='blue' class='text-info'><strong>4</strong></font> seconds.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 394,
+            "Name": "Lornelle's Sunstone",
+            "Type": "Jewelry",
+            "SubType": "Ring",
+            "Description": "Your damage reduction is increased by <font color='blue' class='text-info'><strong>0.95%</strong></font> for every 1% Life you are missing.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 395,
+            "Name": "Krysbin's Sentence",
+            "Type": "Jewelry",
+            "SubType": "Ring",
+            "Description": "You deal <font color='blue' class='text-info'><strong>100%</strong></font> increased damage against slowed enemies or triple this bonus against enemies afflicted by any other type of control-impairing effect..",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
+            "ID": 396,
+            "Name": "Briggs' Wrath",
+            "Type": "Jewelry",
+            "SubType": "Ring",
+            "Description": "Uncursed enemies are pulled to the target location when a curse is applied to them.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
         }
     ]
 }

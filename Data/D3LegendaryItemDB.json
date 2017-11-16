@@ -1297,6 +1297,19 @@
             ]
         },
         {
+            "ID": 91,
+            "Name": "Briggs' Wrath",
+            "Type": "Jewelry",
+            "SubType": "Ring",
+            "Description": "Uncursed enemies are pulled to the target location when a curse is applied to them.",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
             "ID": 92,
             "Name": "Mirrorball",
             "Type": "Weapon",
@@ -4310,6 +4323,19 @@
             ]
         },
         {
+            "ID": 293,
+            "Name": "Krysbin's Sentence",
+            "Type": "Jewelry",
+            "SubType": "Ring",
+            "Description": "You deal <font color='blue' class='text-info'><strong>100%</strong></font> increased damage against slowed enemies or triple this bonus against enemies afflicted by any other type of control-impairing effect..",
+            "NS": false,
+            "S": false,
+            "ST": false,
+            "Class": [
+                "Necromancer"
+            ]
+        },
+        {
             "ID": 294,
             "Name": "Tzo Krin's Gaze",
             "Type": "Armor",
@@ -5819,32 +5845,6 @@
             "Type": "Jewelry",
             "SubType": "Ring",
             "Description": "Your damage reduction is increased by <font color='blue' class='text-info'><strong>0.95%</strong></font> for every 1% Life you are missing.",
-            "NS": false,
-            "S": false,
-            "ST": false,
-            "Class": [
-                "Necromancer"
-            ]
-        },
-        {
-            "ID": 395,
-            "Name": "Krysbin's Sentence",
-            "Type": "Jewelry",
-            "SubType": "Ring",
-            "Description": "You deal <font color='blue' class='text-info'><strong>100%</strong></font> increased damage against slowed enemies or triple this bonus against enemies afflicted by any other type of control-impairing effect..",
-            "NS": false,
-            "S": false,
-            "ST": false,
-            "Class": [
-                "Necromancer"
-            ]
-        },
-        {
-            "ID": 396,
-            "Name": "Briggs' Wrath",
-            "Type": "Jewelry",
-            "SubType": "Ring",
-            "Description": "Uncursed enemies are pulled to the target location when a curse is applied to them.",
             "NS": false,
             "S": false,
             "ST": false,
